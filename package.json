@@ -1,6 +1,6 @@
 {
   "name": "tsc-backup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "auto backup for tsc",
   "main": "main.js",
   "bin": {
@@ -11,6 +11,13 @@
   },
   "author": "changnan666",
   "license": "ISC",
+  "keywords": [
+    "tsc",
+    "typescript",
+    "typescript-cli",
+    "build",
+    "backup"
+  ],
   "dependencies": {
     "comment-json": "^4.1.1",
     "typescript": "^4.5.2"

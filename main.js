@@ -12,6 +12,10 @@ const commandPosition = process.cwd();
 
   const defaultConfig = path.resolve(commandPosition, "tsconfig.json");
   const outdir = parse(await readFile(defaultConfig, "utf-8")).compilerOptions.outDir || "lib";
+  const oldShell = `node ${tscPath} --outDir ${outdir}`;
+  exec(oldShell, (err) => {
+    if (err) throw err;
+  });
 
   const date = new Date();
   const dirName = date.toLocaleString().replace(" ", "-").replace(/\//g, "-");
@@ -22,6 +26,5 @@ const commandPosition = process.cwd();
   exec(shell, (err) => {
     if (err) throw err;
     console.log("build success in " + dirName);
-    process.exit();
   });
 })();
