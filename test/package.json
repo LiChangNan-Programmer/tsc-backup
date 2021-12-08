@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc-backup"
+    "build": "node ../main.js"
   },
   "keywords": [],
   "author": "",
