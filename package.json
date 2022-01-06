@@ -9,8 +9,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "changnan666",
+  "author": "coder-lcn",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coder-lcn/tsc-backup"
+  },
+  "homepage": "https://github.com/coder-lcn/tsc-backup#readme",
+  "bugs": {
+    "url": "https://github.com/coder-lcn/tsc-backup/issues"
+  },
   "keywords": [
     "tsc",
     "typescript",
@@ -20,6 +28,7 @@
   ],
   "dependencies": {
     "comment-json": "^4.1.1",
+    "dayjs": "^1.10.7",
     "typescript": "^4.5.2"
   }
 }

@@ -4,6 +4,7 @@ const path = require("path");
 const { exec } = require("child_process");
 const { readFile, mkdir } = require("fs/promises");
 const { parse } = require("comment-json");
+const dayjs = require('dayjs')
 
 const commandPosition = process.cwd();
 
@@ -12,13 +13,9 @@ const commandPosition = process.cwd();
 
   const defaultConfig = path.resolve(commandPosition, "tsconfig.json");
   const outdir = parse(await readFile(defaultConfig, "utf-8")).compilerOptions.outDir || "lib";
-  const oldShell = `node ${tscPath} --outDir ${outdir}`;
-  exec(oldShell, (err) => {
-    if (err) throw err;
-  });
 
-  const date = new Date();
-  const dirName = date.toLocaleString().replace(" ", "-").replace(/\//g, "-");
+  const now = dayjs();
+  const dirName = now.format('YYYY-MM-DD/HH:mm:ss').toString();
 
   const targetDir = path.resolve(commandPosition, outdir, dirName);
   const shell = `node ${tscPath} --outDir ${targetDir}`;

@@ -1,2 +1,6 @@
 test
 node_modules
+
+./yarn.lock
+.gitignore
+.prettierrc
