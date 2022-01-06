@@ -1,6 +1,6 @@
 {
   "name": "tsc-backup",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "auto backup for tsc",
   "main": "main.js",
   "bin": {
